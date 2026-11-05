@@ -1,0 +1,40 @@
+# =====================================================================================================================
+#  rudi for Isaac Sim
+#
+#  Copyright (c) 2026 Byrst, Inc. All rights reserved.
+#
+#  Proprietary software, licensed, not sold. Use is governed by the Byrst, Inc. license agreement.
+#
+#  https://byrst.com
+# =====================================================================================================================
+
+[package]
+name = "byrst.rudi"
+version = "1.0.0"
+title = "rudi"
+description = "Connect your Byrst account to Isaac Sim and bring your SimReady assets straight into your scenes."
+authors = ["Byrst, Inc."]
+license = "LicenseRef-Proprietary"
+repository = "https://github.com/byrst/rudi"
+category = "Simulation"
+keywords = ["byrst", "rudi", "simready", "validation", "validate", "testing", "test", "robotics", "robot", "physics", "manipulation", "grasp", "pick", "place", "gripper", "3d", "models", "assets", "objects", "digital", "twin", "simulation"]
+feature = true
+readme = "docs/README.md"
+changelog = "docs/CHANGELOG.md"
+icon = "data/icon.png"
+preview_image = "data/preview.png"
+
+[package.target]
+platform = ["windows-x86_64"]
+
+[settings]
+exts."byrst.rudi".update_url = "https://github.com/byrst/rudi/releases/latest/download/update.json"
+
+[dependencies]
+"omni.kit.uiapp" = {}
+"omni.kit.menu.utils" = {}
+"omni.kit.actions.core" = {}
+"omni.kit.notification_manager" = { optional = true }
+
+[[python.module]]
+name = "byrst.rudi"
